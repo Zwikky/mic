@@ -5,7 +5,7 @@
 <script src="assets/js/jquery-3.6.0.js"></script>
 <div class="col-12 inner-container">
     <div class="title-bar">
-        <span class="head-title">Manage Users</span>
+        <span class="head-title">Manage || Users</span>
     </div>
     <form method="post" action="/Member/ListMember" id="MemberForm">
         <div class="content_section">
