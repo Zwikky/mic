@@ -113,7 +113,7 @@
                             <th>Full Name</th>
                             <th>Email</th>
                             <th>Password</th>
-                            <th>Contact ID</th>
+                            <th>Trace ID</th>
                             <th>Match</th>
                             <th>status</th>
                             <th>Action</th>
