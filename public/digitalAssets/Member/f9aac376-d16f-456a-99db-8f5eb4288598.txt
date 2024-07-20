@@ -1,0 +1,283 @@
+1 DRAW BENCH
+1.1 Settings=> Draw Section
+1.1.1 Draw section with searching criteria.
+1.1.2 Create Draw Section
+1.1.2.1 Create Draw Section=> Section Details
+- Section numbers will be generated automatically.
+- The format of the Section Number is: DB<4-digit Sequence Number>, for example, DB1900.
+- The profile will be set as ""Solid,"" and users cannot change the profile.
+- The section category will be ""Draw Bench,"" and users cannot change the category."
+1.1.2.2 Create Draw Section=> Dimension
+1.1.3 Update Draw Section
+1.1.3.1 Update Draw Section=> Section Details
+1.1.3.2 Update Draw Section=> Dimension
+1.1.4 Draw Section Overview
+- Section Details: Section Details and Dimension
+
+1.2 Settings=> Draw Die
+1.2.1 Draw Die list with searching criteria.
+1.2.2 Create Draw Die
+- The Section Number is an Auto-fill text box.
+- The profile will be set as ""Solid,"" and users cannot change it.
+- Die numbers will be generated automatically based on the selected section.
+- The format of the Die Number is: <Section Number><Sequence Number>, for example, DB1900/1, DB1900/2.
+1.2.2.1 Create Draw Die=> MRR and Supplier Details
+1.2.3 Update Draw Die
+1.2.3.1 Update Draw Die=> MRR and Supplier Details
+1.2.15 Draw Die Overview
+
+1.3 Draw Process=> Material Receive Register
+1.3.1 Material Receive Register List with Searching Criteria
+Material will be listed here from when QA will be submitted the material for Reeling and Draw from outsource register.
+
+1.3.2 Material Receive Register=> Receive Material
+Drawbench department must be received the material for further process.
+Material can not be available for further process if the material will not received by drawbench department.
+
+1.4 Draw Process=> Material Floor Status
+1.4.1 Material Floor Status List with Searching Criteria
+User can track the Current, Previous, and Next process of the Material coming for Draw Process
+
+1.5 Draw Process=> Material Handover Register
+1.5.1 Material Handover Register List with Searching Criteria
+
+1.5.2 Material Handover Register=> Create Material Handover
+After all process complete user can Handover the Material to QA
+
+1.5.3 Update Material Handover Register
+1.5.3.1 Update Material Handover Register Note=>Material Handover
+
+1.5.4 Material Handover Register=> Status Details
+Draft - The Material Handover Register has been created but has not been submitted.
+Submitted - The Material Handover Register has been submitted. It is awaiting QA to Receive.
+Received By QA - After QA Receive the Status will be Received By QA.
+
+1.6 Draw Process=> Pointing
+1.6.1 Pointing List with Searching Criteria
+
+1.6.2 Pointing=> Create Log Sheet
+Users will create a log sheet for a specific date, shift, and pointing machine.
+Log sheets cannot be created multiple times for the same date, shift, and pointing machine.
+Users cannot submit the log sheet if there is no associated worksheet or if the worksheet has not been submitted.
+
+1.6.3 Pointing=> Update Log Sheet
+
+1.6.4 Log Sheet=> Pointing Work Sheet
+1.6.4.1 Log Sheet=> Pointing Work Sheet=> Production Details
+User will select Draw section and Lot to get the production data
+Mother Dia Details: Section, Dia and Wt. kg/mtr of die used for production
+Finished Dia Details: Section, Dia and Wt. kg/mtr of order section(draw) used in PCDA
+1.6.4.2 Log Sheet=> Pointing Work Sheet=> Material Received Details
+This section will show the material receive details and material available for Pointing, categorized by identification.
+1.6.4.3 Log Sheet=> Pointing Work Sheet=> Pointing Details
+This section is designated for users to record the number of pieces taken for pointing, categorized by identification.
+Net Pointing Hour=Pointing End Date and Time - Pointing Start Date and Time
+1.6.4.4 Log Sheet=> Pointing Work Sheet=> Manpower
+The system will prompt the user to capture manpower details upon submitting the pointing worksheet.
+
+1.6.5 Pointing Work Sheet=> Update Pointing Work Sheet
+
+1.6.6 Pointing=> Status Details
+In-Progress - The Pointing Work Sheet has been created but has not been submitted.
+Completed - The Pointing Work Sheet has received all the necessary information. This means it is ready to go for the Next Process.
+
+1.7 Draw Process=> Draw
+1.7.1 Draw List with Searching Criteria
+
+1.7.2 Draw=> Create Log Sheet
+Users will create a log sheet for a specific date, shift, and pointing machine.
+Log sheets cannot be created multiple times for the same date, shift, and pointing machine.
+Users cannot submit the log sheet if there is no associated worksheet or if the worksheet has not been submitted.
+
+1.7.3 Draw=> Update Draw Log Sheet
+
+1.7.4 Draw Log Sheet=> Draw Work Sheet
+1.7.4.1 Draw Log Sheet=> Draw Work Sheet=> Production Details
+User will select Draw section and Lot to get the production data
+Mother Dia Details: Section, Dia and Wt. kg/mtr of die used for production
+Finished Dia Details: Section, Dia and Wt. kg/mtr of order section(draw) used in PCDA
+1.7.4.2 Draw Log Sheet=> Draw Work Sheet=> Material for Draw
+This section will show the material receive details and material available for Draw, categorized by identification.
+1.7.4.3 Draw Log Sheet=> Draw Work Sheet=> Material Details
+Material for drawing will be selected based on identification and cut length.
+The number of pieces taken for drawing cannot exceed the available quantity for drawing.
+Net Draw Hour is calculated as the difference between the Draw End Date and Time and the Draw Start Date and Time.
+1.7.4.4 Draw Log Sheet=> Draw Work Sheet=> Material Details=> Draw Pass Details
+Maximum pass allowed is three.
+The 1st draw diameter cannot exceed the mother diameter.
+Each subsequent draw diameter must be smaller than the diameter of the previous pass.
+The draw section will be populated based on the captured draw diameter, considering diameter tolerance for calculating min and max values.
+Draw dies will be populated based on the selected section.
+The last draw diameter cannot exceed the finished diameter, taking diameter tolerance into account for validation.
+Draw quantity will be calculated based on cut length, draw pieces, and draw diameter.
+The draw quantity for the last pass cannot exceed the sum of the quantity taken for draw and rejected quantity.
+The pcs and quantity of last pass will be carry forward for next process.
+1.7.4.5 Draw Log Sheet=> Draw Work Sheet=> Manpower
+The system will prompt the user to capture manpower details upon submitting the draw worksheet.
+1.7.4.6 Draw Log Sheet=> Draw Work Sheet=> Rejection Breakup
+The system will prompt the user to record rejection details upon submitting the draw worksheet.
+Rejection details will be captured based on identification.
+The total rejection quantity cannot exceed the sum of rejection quantities recorded for each identification.
+1.7.5 Draw Work Sheet=> Update Draw Work Sheet
+
+1.7.6 Draw=> Status Details
+In-Progress - The Draw Work Sheet has been created but has not been submitted.
+Completed - The Draw Work Sheet has received all the necessary information. This means it is ready to go for the Next Process Reeling.
+
+1.8 Draw Process=> Reeling
+1.8.1 Reeling List with Searching Criteria
+
+1.8.2 Reeling=> Create Log Sheet
+Users will create a log sheet for a specific date, shift, and reeling machine.
+Log sheets cannot be created multiple times for the same date, shift, and reeling machine.
+Users cannot submit the log sheet if there is no associated worksheet or if the worksheet has not been submitted.
+
+1.8.3 Reeling=> Update Reeling Log Sheet
+
+1.8.4 Reeling Log Sheet=> Reeling Work Sheet
+1.8.4.1 Reeling Log Sheet=> Reeling Work Sheet=> Production Details
+User will select Draw section and Lot to get the production data
+Mother Dia Details: Section, Dia and Wt. kg/mtr of die used for production
+Finished Dia Details: Section, Dia and Wt. kg/mtr of order section(draw) used in PCDA
+1.8.4.2 Reeling Log Sheet=> Reeling Work Sheet=> Material for Reeling
+This section will show the material receive details and material available for Reeling, categorized by identification.
+1.8.4.3 Reeling Log Sheet=> Reeling Work Sheet=> Material Details
+Material for reeling will be selected based on identification and cut length.
+The number of pieces taken for reeling cannot exceed the available quantity for reeling.
+Net reeling Hour is calculated as the difference between the Reeling End Date and Time and the Reeling Start Date and Time.
+1.8.4.4 Reeling Log Sheet=> Reeling Work Sheet=> Material Details=> Reeling Pass Details
+Maximum pass allowed is three.
+Reeling quantity will be calculated based on cut length, reeled pieces, and reeled diameter.
+The reeled quantity for the last pass cannot exceed the sum of the quantity taken for reeling and rejected quantity.
+The pcs and quantity of last pass will be carry forward for next process.
+1.8.4.5 Reeling Log Sheet=> Reeling Work Sheet=> Manpower
+The system will prompt the user to capture manpower details upon submitting the reeling worksheet.
+1.8.4.6 Reeling Log Sheet=> Reeling Work Sheet=> Rejection Breakup
+The system will prompt the user to record rejection details upon submitting the reeling worksheet.
+Rejection details will be captured based on identification.
+The total rejection quantity cannot exceed the sum of rejection quantities recorded for each identification.
+
+1.8.5 Reeling Work Sheet=> Update Reeling Work Sheet
+
+1.8.6 Reeling=> Status Details
+In-Progress - The Reeling Work Sheet has been created but has not been submitted.
+Completed - The Reeling Work Sheet has received all the necessary information. This means it is ready to go for the Next Process Final Cutting.
+
+1.9 Draw Process=> Final Cutting
+1.9.1 Final Cutting List with Searching Criteria
+
+1.9.2 Draw Process=> Final Cutting=> Create Log Sheet
+Users will create a log sheet for a specific date, shift, and reeling machine.
+Log sheets cannot be created multiple times for the same date, shift, and cutting machine.
+Users cannot submit the log sheet if there is no associated worksheet or if the worksheet has not been submitted.
+1.9.3 Final Cutting=> Update Final Cutting Log Sheet
+
+1.9.4 Final Cutting Log Sheet=> Final Cutting Work Sheet
+1.9.4.1 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Production Details
+User will select Draw section and Lot to get the production data
+Mother Dia Details: Section, Dia and Wt. kg/mtr of die used for production
+Finished Dia Details: Section, Dia and Wt. kg/mtr of order section(draw) used in PCDA
+1.9.4.2 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Material for Final Cutting
+This section will show the material receive details and material available for Final Cutting, categorized by identification.
+1.9.4.3 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Customer Details
+Customer details will be populated based on the selected PCDA.
+1.9.4.4 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Final Cutting Details
+The sum of OK pieces and rejected pieces cannot exceed the available pieces.
+The ok pcs and quantity will be carry forward for next process.
+1.9.4.5 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Manpower
+The system will prompt the user to capture manpower details upon submitting the final cutting worksheet.
+1.9.4.6 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Rejection Breakup
+The system will prompt the user to record rejection details upon submitting the final cutting worksheet.
+Rejection details will be captured based on identification.
+The total rejection quantity cannot exceed the sum of rejection quantities recorded for each identification.
+
+1.9.5 Final Cutting Work Sheet=> Update Final Cutting Work Sheet
+
+1.9.6 Final Cutting => Status Details
+In-Progress - The Final Cutting Work Sheet has been created but has not been submitted.
+Completed - The Final Cutting Work Sheet has received all the necessary information. This means it is ready to go for the Next Process Chamfering.
+
+1.10 Draw Process=> Chamfering
+1.10.1 Chamfering List with Searching Criteria
+
+1.10.2 Draw Process=> Chamfering=> Create Log Sheet
+Users will create a log sheet for a specific date, shift, and reeling machine.
+Log sheets cannot be created multiple times for the same date, shift, and cutting machine.
+Users cannot submit the log sheet if there is no associated worksheet or if the worksheet has not been submitted.
+
+1.10.3 Chamfering=> Update Chamfering Log Sheet
+
+1.10.4 Chamfering Log Sheet=> Chamfering Work Sheet
+1.10.4.1 Chamfering Log Sheet=> Chamfering Work Sheet=> Production Details
+User will select Draw section and Lot to get the production data
+Mother Dia Details: Section, Dia and Wt. kg/mtr of die used for production
+Finished Dia Details: Section, Dia and Wt. kg/mtr of order section(draw) used in PCDA
+1.10.4.2 Chamfering Log Sheet=> Chamfering Work Sheet=> Material for Chamfering
+This section will show the material receive details and material available for Chamfering, categorized by identification.
+1.10.4.4 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Final Cutting Details
+The ok pcs and quantity will be carry forward for next process.
+1.10.4.5 Final Cutting Log Sheet=> Final Cutting Work Sheet=> Manpower
+The system will prompt the user to capture manpower details upon submitting the final cutting worksheet.
+
+1.10.5 Chamfering Work Sheet=> Update Chamfering Work Sheet
+
+1.10.6 Chamfering => Status Details
+In-Progress - The Chamfering Work Sheet has been created but has not been submitted.
+Completed - The Chamfering Work Sheet has received all the necessary information. This means it is ready to go for the Next Process Material Handover.
+
+1.11 DRAW BENCH=> Report
+1.11.1 Pointing
+1.11.2 Draw Process
+1.11.3 Reeling
+1.11.4 Final Cutting
+1.11.5 Chamfering
+1.11.6 DM Final Inspection
+
+2. PPC=> Draw Process Flow Chart
+2.1 Draw Process Flow Chart=> List
+2.2 Draw Process Flow Chart=> Create=> Header
+2.3 Draw Process Flow Chart=> Create=> Planning
+2.4 Draw Process Flow Chart=> Create=> Overview
+2.5 Draw Process Flow Chart=> Create=> Print
+2.6 Draw Process Flow Chart=> Create Extrusion Planning
+2.7 Draw Process Flow Chart=> Update
+
+3. QA
+3.1 MIR
+3.1.1 MIR=> Floor Inspection Data (Accepted Details)
+Piece identifications None, Front, Middle, and Back have been implemented.
+Front, Middle, and Back are mandatory for the Drawbench Section.
+Outside the Drawbench Section, the system will not allow capturing pieces for Front, Middle, and Back.
+3.1.2 MIR=> Holding Details
+Piece identifications None, Front, Middle, and Back have been implemented.
+Front, Middle, and Back are mandatory for the Drawbench Section.
+Outside the Drawbench Section, the system will not allow capturing pieces for Front, Middle, and Back.
+3.2 Heat Treatment=> Initialize Process=> Material Details
+The column "Identification" implemented in lot search popup.
+3.3 Physical=> Initialize Process=> Material Details
+The "Identification" column has been implemented in the Lot Search popup.
+A Deviation Billet indicator has been implemented under Deviation.
+The Re-Cutting indicator has been implemented.
+3.4 Under Process Register=> List
+Identification column has been implemented
+3.5 Outsource Job Register=> Job Sheet=> Material Details
+The column "Identification" implemented in lot search popup.
+3.6 Recutting Register=> Recutting Details
+The column "Identification" implemented in material search popup.
+3.7 Hold Register=> List and Hold Clearance Material
+The data point "Identification" implemented
+3.8 Material Floor Status Register
+The column "Identification" implemented
+3.9 Draw Material Recevie Cum Inspection
+3.9.1 Draw Material Recevie Cum Inspection=> Receive Material
+3.9.2 Draw Material Recevie Cum Inspection=> Inspection
+3.9.3 Draw Material Recevie Cum Inspection=> Overview
+
+3.10 QA=> Report
+3.10.1 DM Final Inspection
+
+4. Extrusion=> Capture Dimension
+Business Rule: System will allow to capture dimension of the section of die used for production.
+
+5. Marketing=> Capture PCDA
+Enable to create PCDA using draw section
