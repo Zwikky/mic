@@ -73,7 +73,7 @@
                             </li>
                         
                              <li class="{{ (Request::is('groups/*') || Request::is('groups') || Request::is('groups/*') ? 'active' : '') }}">
-                                <a href="/groups"><label class="group">Groups</label></a>
+                                <a href="{{route('GetGroups')}}"><label class="group">Groups</label></a>
                             </li>
                         
                            
@@ -113,7 +113,7 @@
                                 <li class="">
                                     <a href="#"><label class="userrole">Admin <i class="fa fa-angle-down"></i></label></a>
                                     <ul class="treeview-menu">
-                                        <li><a href="/users">Users</a></li>
+                                        <li><a href="{{route('GetUsers')}}">Users</a></li>
                                         <li><a href="#">Tariff Codes</a></li>
                                     </ul>
                                 </li>
