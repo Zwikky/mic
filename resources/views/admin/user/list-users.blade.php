@@ -115,7 +115,7 @@
                             <th>Password</th>
                             <th>Trace ID</th>
                             <th>Match</th>
-                            <th>status</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
